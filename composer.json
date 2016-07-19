@@ -1,6 +1,6 @@
 {
-    "name": "overtrue/wechat",
-    "description": "微信SDK",
+    "name": "meixiaoqiu/wechat",
+    "description": "微信SDK fork from overtrue/wechat",
     "keywords": [
         "wechat",
         "weixin",
@@ -10,8 +10,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "overtrue",
-            "email": "anzhengchao@gmail.com"
+            "name": "meixiaoqiu",
+            "email": "meixiaoqiu@gmail.com"
         }
     ],
     "require": {

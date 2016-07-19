@@ -97,7 +97,7 @@ class AccessToken
      */
     public function getToken($forceRefresh = false)
     {
-        $cacheKey = $this->prefix.$this->appId;
+        $cacheKey = $this->prefix;
 
         $cached = $this->getCache()->fetch($cacheKey);
 
