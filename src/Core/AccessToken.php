@@ -7,6 +7,7 @@
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
+ * update from mxq 20160720 16:41
  */
 
 /**
@@ -20,8 +21,6 @@
  */
 namespace EasyWeChat\Core;
 
-use Doctrine\Common\Cache\Cache;
-use Doctrine\Common\Cache\FilesystemCache;
 use EasyWeChat\Core\Exceptions\HttpException;
 
 /**
@@ -69,7 +68,7 @@ class AccessToken
      *
      * @var string
      */
-    protected $prefix = 'easywechat.common.access_token.';
+    var $prefix = 'easywechat.common.access_token.';
 
     // API
     const API_TOKEN_GET = 'https://api.weixin.qq.com/cgi-bin/token';
@@ -81,7 +80,7 @@ class AccessToken
      * @param string                       $secret
      * @param \Doctrine\Common\Cache\Cache $cache
      */
-    public function __construct($appId, $secret, Cache $cache = null)
+    public function __construct($appId, $secret, $cache = null)
     {
         $this->appId = $appId;
         $this->secret = $secret;
@@ -154,7 +153,7 @@ class AccessToken
      */
     public function getCache()
     {
-        return $this->cache ?: $this->cache = new FilesystemCache(sys_get_temp_dir());
+        return $this->cache;
     }
 
     /**
